@@ -113,7 +113,7 @@ Save the following file as /etc/wsl.conf on your Wsl host:
 root = /
 options = "metadata"
 ```
-This will mount all of your mapped drives to a corresponding letter in the root of your Wsl filesystem. This is what will allow you the "native" experience of editing file on Windows and running them from your windows or wsl terminals.\
+This will mount all of your mapped drives to a corresponding letter in the root of your Wsl filesystem. This is what will allow you the "native" experience of editing file on Windows and running them from your windows or wsl terminals.\ 
 **Config docker to run from Windows**\
 Create the following file in Wsl `/etc/docker/daemon.json`\
 ```
@@ -122,12 +122,13 @@ Create the following file in Wsl `/etc/docker/daemon.json`\
     "experimental": true
 }
 ```
-Set docker env var in Windows\
+Set docker env var in Windows
 | Env Var | Value | Required/Optional |
 | --------| ----- | ----------------- |
 | `DOCKER_HOST` | `tcp://localhost:2375` | Required |
 | `DOCKER_CLI_EXPERIMENTAL` | `enabled` | Optional |
-| `DOCKER_API_VERSION` | `1.40` | Optional |\
+| `DOCKER_API_VERSION` | `1.40` | Optional |
+
 Install docker client in Windows from 
 ```
 https://dockermsft.blob.core.windows.net/dockercontainer/docker-19-03-1.zip
