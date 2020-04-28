@@ -14,7 +14,7 @@ Arch Linux (yay recommended):
 $ sudo yay -Syyu
 $ sudo yay -S dbus polkit daemonize
 ```
-**2. Create fake-bash**\
+**2. Create fake-bash**
 ```
 $ sudo touch /usr/bin/bash
 $ sudo chmod +x /usr/bin/bash
@@ -60,9 +60,13 @@ exec /usr/bin/nsenter -t "${SYSTEMD_PID}" -m -p --wd="${PWD}" /sbin/runuser -s "
 ```
 **3. Set the fake-bash as our root user's shell**\
 Edit the /etc/passwd file:\
-```$ sudo editor /etc/passwd```\
-Find the line starting with `root:`, it should be the first line. Change it to:\
-`root:x:0:0:root:/root:/usr/bin/bash`\
+```
+$ sudo editor /etc/passwd
+```
+Find the line starting with `root:`, it should be the first line. Change it to:
+```
+root:x:0:0:root:/root:/usr/bin/bash
+```
 *Note the `/usr/bin/bash` here, slight difference*\
 Save and close this file.\
 **4. Restart wsl**\
