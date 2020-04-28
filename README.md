@@ -59,7 +59,7 @@ done
 exec /usr/bin/nsenter -t "${SYSTEMD_PID}" -m -p --wd="${PWD}" /sbin/runuser -s "${USHELL}" "${UNAME}" -- "${@}"
 ```
 **3. Set the fake-bash as our root user's shell**\
-Edit the /etc/passwd file:\
+Edit the /etc/passwd file:
 ```
 $ sudo editor /etc/passwd
 ```
@@ -86,3 +86,5 @@ Done. Now test systemctl with:
 $ systemctl is-active dbus
 active
 ```
+---
+# Install Docker and config docker
