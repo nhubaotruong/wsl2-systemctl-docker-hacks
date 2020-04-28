@@ -113,9 +113,9 @@ Save the following file as /etc/wsl.conf on your Wsl host:
 root = /
 options = "metadata"
 ```
-This will mount all of your mapped drives to a corresponding letter in the root of your Wsl filesystem. This is what will allow you the "native" experience of editing file on Windows and running them from your windows or wsl terminals.\ 
+This will mount all of your mapped drives to a corresponding letter in the root of your Wsl filesystem. This is what will allow you the "native" experience of editing file on Windows and running them from your windows or wsl terminals. \
 **Config docker to run from Windows**\
-Create the following file in Wsl `/etc/docker/daemon.json`\
+Create the following file in Wsl `/etc/docker/daemon.json`
 ```
 {
     "hosts": ["unix://", "tcp://0.0.0.0:2375"],
