@@ -107,7 +107,7 @@ $ sudo usermod -aG docker <Your username>
 ---
 # Config wsl environment (Optional)
 **Add wsl.conf to Wsl**\
-Save the following file as /etc/wsl.conf on your Wsl host:
+Save the following file as `/etc/wsl.conf` on your Wsl host:
 ```
 [automount]
 root = /
