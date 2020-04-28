@@ -1,10 +1,10 @@
-# wsl2
+# wsl2 systemctl and docker hacks
 wsl2 systemctl hack and docker config
 
 **Auto-start/services** (`systemctl` for wsl)
 
 **1. Install dependencies**\
-Ubuntu and Debian:
+Ubuntu:
 ```
 $ sudo apt update
 $ sudo apt install dbus policykit-1 daemonize
@@ -65,3 +65,20 @@ Find the line starting with `root:`, it should be the first line. Change it to:
 `root:x:0:0:root:/root:/usr/bin/bash`
 *Note the `/usr/bin/bash` here, slight difference*\
 Save and close this file.
+**4. Restart wsl**\
+Exit out of wsl shell\
+Ubuntu:
+```
+> wsl --shutdown
+> ubuntu1804.exe config --default-user root
+```
+Arch Linux:
+```
+> wsl --shutdown
+> arch.exe config --default-user root
+```
+Done. Now test systemctl with:
+```
+$ systemctl is-active dbus
+active
+```
