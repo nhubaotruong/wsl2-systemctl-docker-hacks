@@ -88,8 +88,8 @@ active
 ---
 # Install Docker and config docker
 **1. Install docker**\
-Ubuntu:
-*Follow this official guide: https://docs.docker.com/engine/install/ubuntu/*\
+Ubuntu:\
+*Follow this official guide: https://docs.docker.com/engine/install/ubuntu/* \
 Arch Linux: (yay recommended)
 ```
 $ yay -S docker
