@@ -15,9 +15,9 @@ $ yay -S dbus polkit daemonize
 ```
 **2. Create fake-bash**
 ```
-$ sudo touch /usr/bin/bash
-$ sudo chmod +x /usr/bin/bash
-$ sudo editor /usr/bin/bash
+$ sudo touch /usr/bin/fbash
+$ sudo chmod +x /usr/bin/fbash
+$ sudo editor /usr/bin/fbash
 ```
 Add the following, be sure to replace `<YOURUSER>` with your WSL2 Linux username
 ```
@@ -64,9 +64,9 @@ $ sudo editor /etc/passwd
 ```
 Find the line starting with `root:`, it should be the first line. Change it to:
 ```
-root:x:0:0:root:/root:/usr/bin/bash
+root:x:0:0:root:/root:/usr/bin/fbash
 ```
-*Note the `/usr/bin/bash` here, slight difference*\
+*Note the `/usr/bin/fbash` here, slight difference*\
 Save and close this file.\
 **4. Restart wsl**\
 Exit out of wsl shell\
