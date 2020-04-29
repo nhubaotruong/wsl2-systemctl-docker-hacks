@@ -17,7 +17,7 @@ $ yay -S dbus polkit daemonize
 ```
 $ sudo touch /usr/bin/fbash
 $ sudo chmod +x /usr/bin/fbash
-$ sudo editor /usr/bin/fbash
+$ sudo nano /usr/bin/fbash
 ```
 Add the following, be sure to replace `<YOURUSER>` with your WSL2 Linux username
 ```
@@ -114,7 +114,7 @@ root = /
 options = "metadata"
 ```
 This will mount all of your mapped drives to a corresponding letter in the root of your Wsl filesystem. This is what will allow you the "native" experience of editing file on Windows and running them from your windows or wsl terminals. \
-**Config docker to run from Windows**\
+**Config docker to run from Windows (currently broken on arch linux wsl)**\
 Create the following file in Wsl `/etc/docker/daemon.json`
 ```
 {
